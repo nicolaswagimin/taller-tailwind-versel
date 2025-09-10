@@ -11,7 +11,7 @@ export default function Home() {
             <div className="w-1/2">
               <div className="w-full h-64 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
                 <Image
-                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop&crop=center"
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7"
                   alt="Minimalist desk lamp with plant"
                   width={400}
                   height={300}
@@ -30,7 +30,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-3 mb-4">
                   <Image
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
                     alt="Alexander Parkinson"
                     width={32}
                     height={32}
@@ -79,7 +79,7 @@ export default function Home() {
         <div className="lg:col-span-4 bg-white rounded-lg shadow-sm p-6">
           <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop&crop=center"
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
               alt="Coffee cup"
               width={400}
               height={300}
@@ -91,7 +91,7 @@ export default function Home() {
           </h3>
           <div className="flex items-center gap-3">
             <Image
-              src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face"
+              src="https://images.unsplash.com/photo-1494790108755-2616b612b786"
               alt="Tara Gibson"
               width={32}
               height={32}
@@ -127,7 +127,7 @@ export default function Home() {
         <div className="lg:col-span-4 bg-white rounded-lg shadow-sm p-6">
           <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&crop=center"
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
               alt="Modern building"
               width={400}
               height={300}
@@ -146,7 +146,7 @@ export default function Home() {
         <div className="lg:col-span-6 bg-white rounded-lg shadow-sm p-6">
           <div className="flex gap-4">
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
               alt="Alex Morrison"
               width={80}
               height={80}

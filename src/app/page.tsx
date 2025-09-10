@@ -1,40 +1,41 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      {/* Instrucciones en español */}
-      <div className="mb-6 text-center text-sm text-gray-600">
-        Para este taller debe hacer uso de NEXT.JS y se debe adjuntar lo siguiente:
-        <br />
-        • URL de vercel • URL de Github
-      </div>
 
-      {/* Grid principal */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
         
-        {/* Card principal de noticia - Ocupa 8 columnas */}
         <div className="lg:col-span-8 bg-white rounded-lg shadow-sm p-6">
           <div className="flex gap-6">
-            {/* Imagen de la lámpara */}
             <div className="w-1/2">
-              <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                <div className="w-32 h-32 bg-gray-400 rounded-full flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white rounded-full"></div>
-                </div>
+              <div className="w-full h-64 rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=center"
+                  alt="Desk lamp with plant"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             
-            {/* Contenido de texto */}
             <div className="w-1/2 flex flex-col justify-between">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900 mb-4">
                   Green plants are going to Extinct about 500 times faster than they should, Study finds
                 </h1>
-                {/* Pequeño error: comentario innecesario */}
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   If you are the sort of person who just can not keep a plant alive, you are not alone according to a new study published June 10 in the journal Nature..
                 </p>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
+                  <Image
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
+                    alt="Alexander Parkinson"
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 rounded-full object-cover"
+                  />
                   <div>
                     <p className="text-sm font-medium text-gray-900">Alexander Parkinson</p>
                     <p className="text-xs text-gray-500">Jun 20, 2019</p>
@@ -50,42 +51,52 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Navegación de categorías - Ocupa 4 columnas */}
         <div className="lg:col-span-4 bg-white rounded-lg shadow-sm p-6">
           <div className="space-y-4">
             <div className="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
-              <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
+              <span className="text-lg">🌍</span>
               <span className="text-sm font-medium text-gray-700">Global</span>
             </div>
             <div className="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
-              <div className="w-6 h-6 bg-gray-300 rounded"></div>
+              <span className="text-lg">💼</span>
               <span className="text-sm font-medium text-gray-700">Business</span>
             </div>
             <div className="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
-              <div className="w-6 h-6 bg-gray-300 rounded"></div>
+              <span className="text-lg">🎬</span>
               <span className="text-sm font-medium text-gray-700">Entertainment</span>
             </div>
             <div className="flex items-center gap-3 p-2 rounded bg-blue-50">
-              <div className="w-6 h-6 bg-blue-500 rounded"></div>
+              <span className="text-lg">⚽</span>
               <span className="text-sm font-medium text-blue-600">Sports</span>
             </div>
             <div className="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
-              <div className="w-6 h-6 bg-gray-300 rounded"></div>
+              <span className="text-lg">🏥</span>
               <span className="text-sm font-medium text-gray-700">Health</span>
             </div>
           </div>
         </div>
 
-        {/* Card de café - Ocupa 4 columnas */}
         <div className="lg:col-span-4 bg-white rounded-lg shadow-sm p-6">
-          <div className="w-full h-48 bg-blue-100 rounded-lg mb-4 flex items-center justify-center">
-            <div className="w-20 h-20 bg-blue-200 rounded-full"></div>
+          <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop&crop=center"
+              alt="Coffee cup"
+              width={400}
+              height={300}
+              className="w-full h-full object-cover"
+            />
           </div>
           <h3 className="text-lg font-bold text-gray-900 mb-3">
             How to make the perfect morning coffee, according to the Science
           </h3>
           <div className="flex items-center gap-3">
-            <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
+            <Image
+              src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face"
+              alt="Tara Gibson"
+              width={32}
+              height={32}
+              className="w-6 h-6 rounded-full object-cover"
+            />
             <div>
               <p className="text-sm font-medium text-gray-900">Tara Gibson</p>
               <p className="text-xs text-gray-500">Jul 13, 2019</p>
@@ -93,14 +104,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Card de búsqueda y tags - Ocupa 4 columnas */}
         <div className="lg:col-span-4 bg-white rounded-lg shadow-sm p-6">
           <div className="flex gap-2 mb-4">
             <input 
               type="text" 
               placeholder="Search for articles" 
               className="flex-1 px-3 py-2 border border-gray-300 rounded text-sm"
-              // Pequeño error: atributo sin valor
               disabled={false}
             />
             <button className="w-10 h-10 bg-blue-500 rounded flex items-center justify-center">
@@ -115,10 +124,15 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Card de película - Ocupa 4 columnas */}
         <div className="lg:col-span-4 bg-white rounded-lg shadow-sm p-6">
-          <div className="w-full h-48 bg-blue-200 rounded-lg mb-4 flex items-center justify-center">
-            <div className="w-24 h-24 bg-blue-300 rounded"></div>
+          <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop&crop=center"
+              alt="Modern building"
+              width={400}
+              height={300}
+              className="w-full h-full object-cover"
+            />
           </div>
           <h3 className="text-lg font-bold text-gray-900 mb-2">
             An Inspiring Short Film
@@ -129,10 +143,15 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Card de perfil - Ocupa 6 columnas */}
         <div className="lg:col-span-6 bg-white rounded-lg shadow-sm p-6">
           <div className="flex gap-4">
-            <div className="w-20 h-20 bg-gray-300 rounded-full"></div>
+            <Image
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+              alt="Alex Morrison"
+              width={80}
+              height={80}
+              className="w-20 h-20 rounded-full object-cover"
+            />
             <div className="flex-1">
               <h3 className="text-xl font-bold text-gray-900 mb-1">Alex Morrison</h3>
               <p className="text-sm text-gray-600 mb-4">Senior Journalist</p>
@@ -164,7 +183,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Card de navegación y filtros - Ocupa 6 columnas */}
         <div className="lg:col-span-6 bg-white rounded-lg shadow-sm p-6">
           <div className="flex justify-center gap-4 mb-4">
             <button className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">

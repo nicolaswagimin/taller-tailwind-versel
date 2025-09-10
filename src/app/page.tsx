@@ -9,10 +9,10 @@ export default function Home() {
         <div className="lg:col-span-8 bg-white rounded-lg shadow-sm p-6">
           <div className="flex gap-6">
             <div className="w-1/2">
-              <div className="w-full h-64 rounded-lg overflow-hidden">
+              <div className="w-full h-64 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
                 <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=center"
-                  alt="Desk lamp with plant"
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop&crop=center"
+                  alt="Minimalist desk lamp with plant"
                   width={400}
                   height={300}
                   className="w-full h-full object-cover"

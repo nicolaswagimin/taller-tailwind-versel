@@ -1,103 +1,193 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gray-100 p-6">
+      {/* Instrucciones en español */}
+      <div className="mb-6 text-center text-sm text-gray-600">
+        Para este taller debe hacer uso de NEXT.JS y se debe adjuntar lo siguiente:
+        <br />
+        • URL de vercel • URL de Github
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Grid principal */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        {/* Card principal de noticia - Ocupa 8 columnas */}
+        <div className="lg:col-span-8 bg-white rounded-lg shadow-sm p-6">
+          <div className="flex gap-6">
+            {/* Imagen de la lámpara */}
+            <div className="w-1/2">
+              <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+                <div className="w-32 h-32 bg-gray-400 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white rounded-full"></div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Contenido de texto */}
+            <div className="w-1/2 flex flex-col justify-between">
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900 mb-4">
+                  Green plants are going to Extinct about 500 times faster than they should, Study finds
+                </h1>
+                {/* Pequeño error: comentario innecesario */}
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  If you are the sort of person who just can not keep a plant alive, you are not alone according to a new study published June 10 in the journal Nature..
+                </p>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">Alexander Parkinson</p>
+                    <p className="text-xs text-gray-500">Jun 20, 2019</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-end">
+                <div className="w-6 h-6 bg-gray-300 rounded flex items-center justify-center">
+                  <span className="text-xs">↗</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Navegación de categorías - Ocupa 4 columnas */}
+        <div className="lg:col-span-4 bg-white rounded-lg shadow-sm p-6">
+          <div className="space-y-4">
+            <div className="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
+              <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
+              <span className="text-sm font-medium text-gray-700">Global</span>
+            </div>
+            <div className="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
+              <div className="w-6 h-6 bg-gray-300 rounded"></div>
+              <span className="text-sm font-medium text-gray-700">Business</span>
+            </div>
+            <div className="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
+              <div className="w-6 h-6 bg-gray-300 rounded"></div>
+              <span className="text-sm font-medium text-gray-700">Entertainment</span>
+            </div>
+            <div className="flex items-center gap-3 p-2 rounded bg-blue-50">
+              <div className="w-6 h-6 bg-blue-500 rounded"></div>
+              <span className="text-sm font-medium text-blue-600">Sports</span>
+            </div>
+            <div className="flex items-center gap-3 p-2 rounded hover:bg-gray-50">
+              <div className="w-6 h-6 bg-gray-300 rounded"></div>
+              <span className="text-sm font-medium text-gray-700">Health</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Card de café - Ocupa 4 columnas */}
+        <div className="lg:col-span-4 bg-white rounded-lg shadow-sm p-6">
+          <div className="w-full h-48 bg-blue-100 rounded-lg mb-4 flex items-center justify-center">
+            <div className="w-20 h-20 bg-blue-200 rounded-full"></div>
+          </div>
+          <h3 className="text-lg font-bold text-gray-900 mb-3">
+            How to make the perfect morning coffee, according to the Science
+          </h3>
+          <div className="flex items-center gap-3">
+            <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
+            <div>
+              <p className="text-sm font-medium text-gray-900">Tara Gibson</p>
+              <p className="text-xs text-gray-500">Jul 13, 2019</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Card de búsqueda y tags - Ocupa 4 columnas */}
+        <div className="lg:col-span-4 bg-white rounded-lg shadow-sm p-6">
+          <div className="flex gap-2 mb-4">
+            <input 
+              type="text" 
+              placeholder="Search for articles" 
+              className="flex-1 px-3 py-2 border border-gray-300 rounded text-sm"
+              // Pequeño error: atributo sin valor
+              disabled={false}
+            />
+            <button className="w-10 h-10 bg-blue-500 rounded flex items-center justify-center">
+              <span className="text-white text-sm">🔍</span>
+            </button>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">#Politics</span>
+            <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">#Science</span>
+            <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">#Movies</span>
+            <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">#Technology</span>
+          </div>
+        </div>
+
+        {/* Card de película - Ocupa 4 columnas */}
+        <div className="lg:col-span-4 bg-white rounded-lg shadow-sm p-6">
+          <div className="w-full h-48 bg-blue-200 rounded-lg mb-4 flex items-center justify-center">
+            <div className="w-24 h-24 bg-blue-300 rounded"></div>
+          </div>
+          <h3 className="text-lg font-bold text-gray-900 mb-2">
+            An Inspiring Short Film
+          </h3>
+          <div className="flex items-center gap-2">
+            <span className="text-sm">👁</span>
+            <span className="text-sm text-gray-600">80,989</span>
+          </div>
+        </div>
+
+        {/* Card de perfil - Ocupa 6 columnas */}
+        <div className="lg:col-span-6 bg-white rounded-lg shadow-sm p-6">
+          <div className="flex gap-4">
+            <div className="w-20 h-20 bg-gray-300 rounded-full"></div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Alex Morrison</h3>
+              <p className="text-sm text-gray-600 mb-4">Senior Journalist</p>
+              
+              <div className="grid grid-cols-3 gap-4 mb-4">
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-gray-900">34</p>
+                  <p className="text-xs text-gray-600">Articles</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-gray-900">980</p>
+                  <p className="text-xs text-gray-600">Followers</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-gray-900">8.9</p>
+                  <p className="text-xs text-gray-600">Rating</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-3">
+                <button className="px-4 py-2 border border-gray-300 rounded text-sm font-medium text-gray-700">
+                  Chat
+                </button>
+                <button className="px-4 py-2 bg-blue-500 text-white rounded text-sm font-medium">
+                  Follow
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Card de navegación y filtros - Ocupa 6 columnas */}
+        <div className="lg:col-span-6 bg-white rounded-lg shadow-sm p-6">
+          <div className="flex justify-center gap-4 mb-4">
+            <button className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+              <span className="text-sm">←</span>
+            </button>
+            <button className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+              <span className="text-sm">→</span>
+            </button>
+          </div>
+          
+          <div className="space-y-3">
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">Donald Trump</span>
+              <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">USA</span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">Politics</span>
+              <span className="px-3 py-1 bg-blue-500 text-white rounded-full text-xs">2020</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }
